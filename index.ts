@@ -1,7 +1,4 @@
-console.log("hello brendans")
-
 const button_element: HTMLButtonElement | null = document.querySelector("button")
-console.log(button_element)
 
 button_element?.addEventListener("click", () => {
     // Grab the input and output elements
@@ -18,9 +15,13 @@ button_element?.addEventListener("click", () => {
     const max_n_string: string | undefined = input_element.value
     const max_n: number = parseInt(max_n_string)
     
+    let fib_numbers: number[] = []
     for (let i = 1; i <= max_n; i++) {
+        fib_numbers.push(fib(i))
+    }
+    for (const [i, fib_number] of fib_numbers.entries()) {
         const current_output_element = document.createElement("div")
-        current_output_element.innerText = `${i}: ${fib(i)}`
+        current_output_element.innerText = `${i}: ${fib_number}`
         output_element.appendChild(current_output_element)
     }
 })
