@@ -21,7 +21,7 @@ button_element === null || button_element === void 0 ? void 0 : button_element.a
     let enumeration;
     for (enumeration of fib_numbers.entries()) {
         const current_output_element = document.createElement("div");
-        current_output_element.innerText = `${enumeration[0]}: ${enumeration[1]}`;
+        current_output_element.innerText = `${enumeration[0] + 1}: ${enumeration[1]}`;
         output_element.appendChild(current_output_element);
     }
 });

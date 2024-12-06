@@ -25,7 +25,7 @@ button_element?.addEventListener("click", () => {
     let enumeration: [number, number]
     for (enumeration of fib_numbers.entries()) {
         const current_output_element = document.createElement("div")
-        current_output_element.innerText = `${enumeration[0]}: ${enumeration[1]}`
+        current_output_element.innerText = `${enumeration[0] + 1}: ${enumeration[1]}`
         output_element.appendChild(current_output_element)
     }
 })
