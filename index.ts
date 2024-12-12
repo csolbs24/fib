@@ -7,7 +7,7 @@ button_element?.addEventListener("click", () => {
 
     // If either one is null for whatever reason then exit the function
     if (input_element === null || output_element === null) return
-        
+
     // Clear the previous children
     output_element.innerHTML = ""
 
@@ -34,7 +34,8 @@ const fib = (current_number: number, memowise: {[key: number]: number} = {}): nu
     // Check if we've already memoised the answer
     if (current_number in memowise) {
         return memowise[current_number]
-    }    
+    }
+
     // The first two fib numbers are 1
     if (current_number == 1) {
         memowise[current_number] = 1
@@ -45,6 +46,7 @@ const fib = (current_number: number, memowise: {[key: number]: number} = {}): nu
         return 1
     }
     
+    // Calculate the fib number then memoise it before returning
     const current_fib = fib(current_number - 1) + fib(current_number - 2)
     memowise[current_number] = current_fib
     return current_fib

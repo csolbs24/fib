@@ -39,6 +39,7 @@ const fib = (current_number, memowise = {}) => {
         memowise[current_number] = 1;
         return 1;
     }
+    // Calculate the fib number then memoise it before returning
     const current_fib = fib(current_number - 1) + fib(current_number - 2);
     memowise[current_number] = current_fib;
     return current_fib;
